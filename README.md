@@ -34,7 +34,7 @@ price = co.total
 ```
 
 ```
-Test data 
+Test Data 
 -----------------------------
 Basket: 001,002,003
 Total price expected: £66.78 
@@ -82,7 +82,7 @@ require './lib/checkout.rb'
   item2 = Item.new "002", "Personalised cufflinks", 45.00
   item3 = Item.new "003", "Kids T-Shirt", 19.95
 ```
-## Run commands
+## Run Commands
 ```
   co.scan(item1)
   co.scan(item2)
@@ -90,6 +90,6 @@ require './lib/checkout.rb'
   price = co.total
 ```
 
-## Tech used
+## Tech Used
 
 Ruby, Rspec, Rubocop
