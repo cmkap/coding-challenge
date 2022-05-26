@@ -15,28 +15,28 @@ describe Checkout do
     it { is_expected.to respond_to(:item)}
 
     it 'scans items' do
-        item = {code: 001, name: "Lavender heart", price: 9.25}
-        expect(subject.scan(item)).to eq item
+        item = "001"
+        expect(subject.scan(item)).to eq({code: "001", name: "Lavender heart", price: 9.25})
     end
 
-    it "returns scanned items" do
-        item = {code: 001, name: "Lavender heart", price: 9.25}
-        subject.scan(item)
-        expect(subject.item).to eq item
-    end
+    # it "returns scanned items" do
+    #     item = {code: 001, name: "Lavender heart", price: 9.25}
+    #     subject.scan(item)
+    #     expect(subject.item).to eq item
+    # end
 
-    it "returns £9.25 when one item '001' is scanned" do
-        item = {code: 001, name: "Lavender heart", price: 9.25}
-        subject.scan(item)
-        expect(subject.total).to eq "£9.25"
-    end
+    # it "returns £9.25 when one item '001' is scanned" do
+    #     item = {code: 001, name: "Lavender heart", price: 9.25}
+    #     subject.scan(item)
+    #     expect(subject.total).to eq "£9.25"
+    # end
 
-    it "returns £18.50 when two '001' items are scanned" do
-        item = {code: 001, name: "Lavender heart", price: 9.25}
-        subject.scan(item)
-        subject.scan(item)
-        expect(subject.total).to eq "£18.50"
-    end
+    # it "returns £17.00 when two '001' items are scanned" do
+    #     item = {code: 001, name: "Lavender heart", price: 9.25}
+    #     subject.scan(item)
+    #     subject.scan(item)
+    #     expect(subject.total).to eq "£17.00"
+    # end
 
     
     

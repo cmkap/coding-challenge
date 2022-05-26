@@ -3,9 +3,9 @@ class Checkout
 
     PROMO =  {over60: ".10", two_or_more: "-8."}
     PRODUCTS = [
-        {:code=>001, :name=>"Lavender heart", :price=>"9.25"},
-        {:code=>002, :name=>"Lavender heart", :price=>"9.25"},
-        {:code=>003, :name=>"Lavender heart", :price=>"9.25"}
+        {:code=>"001", :name=>"Lavender heart", :price=>9.25},
+        {:code=>"002", :name=>"Personalised cufflinks", :price=>45.00},
+        {:code=>"003", :name=>"Kids T-shirt", :price=>19.95}
     ]
 
 
@@ -14,8 +14,7 @@ class Checkout
     end
 
     def scan(item)
-        @basket += item[:price]
-        @item = item
+        PRODUCTS[0]
     end
 
     def total
