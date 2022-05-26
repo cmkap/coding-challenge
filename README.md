@@ -60,7 +60,7 @@ rspec
 irb
 require './lib/checkout.rb'
 
-# Load the promotions logic and instantiate checkout
+## Load the promotions logic and instantiate checkout
 
 ```
   PROMO1 = Proc.new do |scanned_items, item_total|
@@ -76,7 +76,7 @@ require './lib/checkout.rb'
   co = Checkout.new(PROMOTIONAL_RULES)
 ```
 
-# Instantiate the items you want to checkout
+## Instantiate the items you want to checkout
 ```
   item1 = Item.new "001", "Lavender heart", 9.25
   item2 = Item.new "002", "Personalised cufflinks", 45.00
