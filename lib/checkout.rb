@@ -5,15 +5,16 @@ class Checkout
 
 
     def initialize(promotional_rules = PROMO)
-        
+        @counter = 0
     end
 
     def scan(item)
+        @counter += item[:price]
         @item = item
     end
 
     def total
-        "£" + @item[:price]
+        "£#{sprintf("%#.2f",@counter)}"
     end
 
 end
