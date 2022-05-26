@@ -24,7 +24,7 @@ class Checkout
       apply_discounts(item_total, @scanned_items)
     end
   
-    def apply_discounts(item_total, scanned_items)
+    def discounts(item_total, scanned_items)
       old_lavender_price = 9.25
       new_lavender_price = 8.50
       if @promotional_rules[:promo1].call(scanned_items, item_total)
