@@ -52,7 +52,7 @@ Total price expected: £73.76
 Run the below commands in your command line interface to run the test suite and test functionality in IRB. Ensure have Ruby and Rspec installed on your local machine.
 
 
-git clone https://github.com/AlexHandy1/checkout
+git clone https://github.com/cmkap/coding-challenge
 cd checkout
 rspec
 
