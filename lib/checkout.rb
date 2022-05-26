@@ -1,4 +1,5 @@
 class Checkout
+    attr_reader :item
     PROMO =  {over60: ".10", two_or_more: "-8."}
 
 
@@ -12,13 +13,5 @@ class Checkout
 
     def total
     end
-
-    def item
-        @item
-    end
-
-
-
-    
 
 end
