@@ -63,8 +63,8 @@ require './lib/checkout.rb'
 ## Load the promotions logic and instantiate checkout
 
 ```
-  PROMO1 = Proc.new do |scanned_items, item_total|
-    scanned_items.map{|x| x[1]}.select{|x| x == "Lavender heart"}.length > 1
+  PROMO1 = Proc.new do |items, item_total|
+    items.map{|x| x[1]}.select{|x| x == "Lavender heart"}.length > 1
   end
 
   PROMO2 = Proc.new do |item_total|
