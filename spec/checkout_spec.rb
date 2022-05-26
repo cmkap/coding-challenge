@@ -37,6 +37,8 @@ describe Checkout do
         subject.scan(item)
         expect(subject.total).to eq "£18.50"
     end
+
+    
     
 
 
