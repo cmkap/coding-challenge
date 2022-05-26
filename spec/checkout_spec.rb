@@ -14,13 +14,22 @@ describe Checkout do
 
     it { is_expected.to respond_to(:item)}
 
-    it 'scans items' do
+    it 'returns Lavender heart when scanned item 001 is scanned' do
         item = "001"
         expect(subject.scan(item)).to eq({code: "001", name: "Lavender heart", price: 9.25})
     end
 
+    it 'returns Personalised cufflinks when scanned item 002 is scanned' do
+        item = "002"
+        expect(subject.scan(item)).to eq({:code=>"002", :name=>"Personalised cufflinks", :price=>45.00})
+    end
+
+    
+
+
+
     # it "returns scanned items" do
-    #     item = {code: 001, name: "Lavender heart", price: 9.25}
+    #     item = "001"
     #     subject.scan(item)
     #     expect(subject.item).to eq item
     # end

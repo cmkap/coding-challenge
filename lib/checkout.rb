@@ -14,7 +14,11 @@ class Checkout
     end
 
     def scan(item)
-        PRODUCTS[0]
+        product = PRODUCTS.select do |product|
+            product[:code].include? item 
+        end
+
+        @item = product[0]
     end
 
     def total
