@@ -4,7 +4,7 @@ class Checkout
     def initialize(promotional_rules = PROMO)
     end
 
-    def scan
+    def scan(item)
     end
 
 
