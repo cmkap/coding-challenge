@@ -20,10 +20,18 @@ describe Checkout do
     end
 
     it "returns scanned items" do
-        item = {"001": "9.25"}
+        item = {code: 001, name: "Lavender heart", price: "9.25"}
         subject.scan(item)
         expect(subject.item).to eq item
     end
+
+    it "returns total price when one item is added" do
+        item = {code: 001, name: "Lavender heart", price: "9.25"}
+        subject.scan(item)
+        expect(subject.total).to eq "£9.25"
+    end
+    
+
 
 end
 

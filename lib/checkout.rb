@@ -1,5 +1,6 @@
 class Checkout
     attr_reader :item
+
     PROMO =  {over60: ".10", two_or_more: "-8."}
 
 
@@ -12,6 +13,7 @@ class Checkout
     end
 
     def total
+        "£" + @item[:price]
     end
 
 end
