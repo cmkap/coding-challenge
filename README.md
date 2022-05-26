@@ -47,3 +47,37 @@ Total price expected: £73.76
 
 ## **How to run the application**
 
+Run the below commands in your command line interface to run the test suite and test functionality in IRB. Ensure have Ruby and Rspec installed on your local machine.
+
+```
+git clone https://github.com/AlexHandy1/checkout
+cd checkout
+rspec
+
+irb
+require './lib/checkout.rb'
+#load the promotions logic and instantiate checkout
+  PROMO1 = Proc.new do |scanned_items, item_total|
+    scanned_items.map{|x| x[1]}.select{|x| x == "Lavender heart"}.length > 1
+  end
+
+  PROMO2 = Proc.new do |item_total|
+    item_total > 60
+  end
+
+  PROMOTIONAL_RULES = {"promo1":  PROMO1, "promo2": PROMO2}
+
+  co = Checkout.new(PROMOTIONAL_RULES)
+
+#instantiate the items you want to checkout
+  item1 = Item.new "001", "Lavender heart", 9.25
+  item2 = Item.new "002", "Personalised cufflinks", 45.00
+  item3 = Item.new "003", "Kids T-Shirt", 19.95
+
+#run commands
+  co.scan(item1)
+  co.scan(item2)
+  co.scan(item3)
+  price = co.total
+
+```
