@@ -81,3 +81,6 @@ require './lib/checkout.rb'
   price = co.total
 
 ```
+Tech used
+
+Ruby, Rspec, Rubocop
